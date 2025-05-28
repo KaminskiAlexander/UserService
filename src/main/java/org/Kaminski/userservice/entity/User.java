@@ -26,20 +26,20 @@ public class User {
     private Integer age;
 
     @Column(name = "created_at")
-    private LocalDateTime created_at = LocalDateTime.now();
+    private LocalDateTime timeCreation = LocalDateTime.now();
 
 
     public User(String name, String email, Integer age) {
         this.name = name;
         this.email = email;
         this.age = age;
-        this.created_at = LocalDateTime.now();
+        this.timeCreation = LocalDateTime.now();
     }
 
     @Override
     public String toString() {
         return "Пользователь " + id +
-                " - Был создан: " + created_at +
+                " - Был создан: " + timeCreation +
                 " Возраст: " + age +
                 ", email: " + email +
                 ", Имя: " + name;
